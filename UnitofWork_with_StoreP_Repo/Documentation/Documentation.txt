@@ -1,0 +1,18 @@
+﻿
+
+				****** Insert multiple rows in single hit *******
+
+				1st - create your main project "UnitOfWork_with_StoreP_Repo".
+
+				2nd - Add DataAccessLayer and Stored Procedure 
+						and install EntityFrameworkExtras using NuGet Package Manager.
+						and Create User-Define-Table-Type with InsertBulkdata_SP in sql.
+
+				3rd - Add DataTransferObject and create view model and also
+				       add view model of User-Define-Table-Type and InsertBulkdata_SP in DTO
+
+				3rd - Add BusinessAccessLayer Write all CRUD logic here.
+					and install EntityFrameworkExtras using NuGet Package Manager.
+					and access view model of User-Define-Table-Type and InsertBulkdata_SP 
+					and pass data from list.
+					and execute procedure.

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcprctdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MvcprctdbEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="DeleteEmployee">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetEmployeeById" ReturnType="Collection(MvcprctdbModel.GetEmployeeById_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetEmployees" ReturnType="Collection(MvcprctdbModel.GetEmployees_Result)" />
+    <FunctionImport Name="InsertEmployees">
+      <Parameter Name="EmployeeName" Mode="In" Type="String" />
+      <Parameter Name="EmployeeSalary" Mode="In" Type="String" />
+      <Parameter Name="FatherName" Mode="In" Type="String" />
+      <Parameter Name="Contact" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateEmployee">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="EmployeeName" Mode="In" Type="String" />
+      <Parameter Name="EmployeeSalary" Mode="In" Type="String" />
+      <Parameter Name="FatherName" Mode="In" Type="String" />
+      <Parameter Name="Contact" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBulkEmployees" />
+  </EntityContainer>
+  <ComplexType Name="GetEmployeeById_Result">
+    <Property Type="Int32" Name="EmployeeId" Nullable="false" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmployeeSalary" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DetailId" Nullable="false" />
+    <Property Type="String" Name="FatherName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contact" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetEmployees_Result">
+    <Property Type="Int32" Name="EmployeeId" Nullable="false" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmployeeSalary" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="DetailId" Nullable="false" />
+    <Property Type="String" Name="FatherName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contact" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>
